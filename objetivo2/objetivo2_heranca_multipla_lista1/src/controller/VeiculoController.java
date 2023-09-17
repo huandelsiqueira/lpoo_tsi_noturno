@@ -54,7 +54,34 @@ public class VeiculoController {
         System.out.println("\nLista com veículos classificados pelo ano em ordem decrescente:");
         System.out.println(VeiculoList);
 
-        System.out.println("\nLista com automóveis classificados pelo ano em ordem decrescente:\n");
+        System.out.println("\nLista com automóveis classificados pelo ano em ordem decrescente:");
+        for (Veiculo veic : VeiculoList) {
+            if (veic instanceof Automovel) {
+                System.out.print(veic);
+            }
+        }
+
+        System.out.println("\n\nLista com bicicletas classificadas pelo ano em ordem decrescente:");
+        for (Veiculo bic: VeiculoList) {
+            if (bic instanceof Bicicleta){
+                System.out.print(bic);
+            }
+        }
+
+        car2.setPlaca("IUA-1000");
+        car5.setPlaca("IAF-0897");
+        cam1.setPlaca("IJN-0410");
+        cam2.setPlaca("IRD-6658");
+        cam4.setPlaca("IMW-3284");
+
+        System.out.println("\n\nLista com automóveis que possuem placas com a letra inicial 'I' classificados pelo ano em ordem decrescente:");
+        for (Veiculo aut: VeiculoList) {
+            if (aut instanceof Automovel) {
+                if (((Automovel) aut).getPlaca().startsWith("I") || ((Automovel) aut).getPlaca().startsWith("i")) {
+                    System.out.print(aut);
+                }
+            }
+        }
 
     }
 }
