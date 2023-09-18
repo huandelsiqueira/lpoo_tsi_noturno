@@ -2,8 +2,7 @@ package controller;
 
 import model.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class FuncionarioController {
     public static void main(String[] args) {
@@ -40,7 +39,7 @@ public class FuncionarioController {
         Gerente ger2 = new Gerente("Maria", 14500.00, "JLD940", 500);
         Gerente ger3 = new Gerente("Beatriz", 17800.00, "JLD940", 1500);
         Gerente ger4 = new Gerente("Matheus", 9000.00, "JLD940", 5000);
-        Gerente ger5 = new Gerente("Joice", 20000.00, "JLD940", 9000);
+        Gerente ger5 = new Gerente("Joice", 29000.00, "JLD940", 9000);
         Gerente ger6 = new Gerente("Ricardo", 25250.00, "JLD940", 10150);
 
         System.out.println(ger1);
@@ -84,5 +83,35 @@ public class FuncionarioController {
         System.out.println("\n\nLista de Investidores:\n");
         System.out.print(InvestidorList);
 
+        FuncionarioList.sort(Comparator.comparing(Funcionario::getSalario).reversed());
+        System.out.println("\n\nLista dos funcionários ordenada pelo salário em ordem decrescente:\n");
+        System.out.print(FuncionarioList);
+
+        InvestidorList.sort(Comparator.comparing(Investidor::getQuantidade).reversed());
+        System.out.println("\n\nLista dos clientes ordenada pela quantidade de tickers em ordem decrescente:\n");
+        for (Investidor cliente: InvestidorList) {
+            if (cliente instanceof Cliente) {
+                System.out.print(cliente);
+            }
+        }
+
+        System.out.println("\n\nLista de investidores ordenada pela quantidade de tickers em ordem decrescente:\n");
+        System.out.print(InvestidorList);
+
+        Funcionario func_maior_salario = Collections.max(FuncionarioList, Comparator.comparing(Funcionario::getSalario));
+        System.out.println("\n\nFuncionário com o maior salário:");
+        for (Funcionario func: FuncionarioList) {
+            if (func.getSalario() >= func_maior_salario.getSalario()) {
+                System.out.println(func);
+            }
+        }
+
+        Investidor invest_maior_qt = Collections.max(InvestidorList, Comparator.comparing(Investidor::getQuantidade));
+        System.out.println("\nInvestidor com a maior quantidade de tickers:");
+        for (Investidor invest: InvestidorList) {
+            if(invest.getQuantidade() >= invest_maior_qt.getQuantidade()) {
+                System.out.println(invest);
+            }
+        }
     }
 }
