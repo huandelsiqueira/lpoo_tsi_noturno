@@ -49,6 +49,11 @@ public class Cliente implements Associado {
     }
 
     @Override
+    public int getQtdeCotas() {
+        return qdeCotas;
+    }
+
+    @Override
     public String toString() {
         return "\nCliente{" +
                 "nome='" + nome + '\'' +

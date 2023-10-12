@@ -39,6 +39,11 @@ public class ContaCorrente extends Conta implements Associado {
     }
 
     @Override
+    public int getQtdeCotas() {
+        return qdeCotas;
+    }
+
+    @Override
     public String toString() {
         return "\nContaCorrente{" +
                 "qdeCotas=" + qdeCotas +
