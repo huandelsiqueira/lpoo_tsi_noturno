@@ -13,6 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/objetivo2/objetivo2_heranca_multipla_lista2/objetivo2_heranca_multipla_lista2.iml" filepath="$PROJECT_DIR$/objetivo2/objetivo2_heranca_multipla_lista2/objetivo2_heranca_multipla_lista2.iml" />
       <module fileurl="file://$PROJECT_DIR$/objetivo2/objetivo2_heranca_simples_lista1/objetivo2_heranca_simples_lista1.iml" filepath="$PROJECT_DIR$/objetivo2/objetivo2_heranca_simples_lista1/objetivo2_heranca_simples_lista1.iml" />
       <module fileurl="file://$PROJECT_DIR$/objetivo2/objetivo2_polimorfismo_lista1/objetivo2_polimorfismo_lista1.iml" filepath="$PROJECT_DIR$/objetivo2/objetivo2_polimorfismo_lista1/objetivo2_polimorfismo_lista1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo3/objetivo3.iml" filepath="$PROJECT_DIR$/objetivo3/objetivo3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo3/objetivo3_associacao_classes_lista1/objetivo3_associacao_classes_lista1.iml" filepath="$PROJECT_DIR$/objetivo3/objetivo3_associacao_classes_lista1/objetivo3_associacao_classes_lista1.iml" />
     </modules>
   </component>
 </project>
