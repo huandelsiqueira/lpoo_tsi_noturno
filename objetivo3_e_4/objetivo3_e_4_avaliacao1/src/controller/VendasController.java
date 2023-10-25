@@ -1,5 +1,6 @@
 package controller;
 
+import exceptions.MyException;
 import model.*;
 
 import java.text.NumberFormat;
@@ -7,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VendasController extends MyException {
+public class VendasController {
     public static void main(String[] args) {
 
         Vendedor vend1 = new Vendedor(2030, "Daniel", "Fernando Osório", "Três Vendas", "96485-985", "Pelotas", "RS", "Mercado Nacional");
@@ -66,7 +67,20 @@ public class VendasController extends MyException {
             System.out.println("\nValor total de gastos com fornecimento:\n");
             System.out.println(NumberFormat.getCurrencyInstance().format(totalFornecido));
 
-        } else getError();
+        } else myThrowException();
 
     }
+
+    private static void myThrowException() {
+        try {
+            throw new MyException("Erro no pedido! Estoque insuficiente.\n");
+        } catch (MyException e) {
+            e.printStackTrace();
+        } finally {
+            System.err.println("Finally executado em myThrowException()");
+        }
+    }
+
 }
+
+
